@@ -1,0 +1,31 @@
+package com.college.yi.bookmanager.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.college.yi.bookmanager.model.Book;
+import com.college.yi.bookmanager.service.BookService;
+
+//メソッドの戻り値をJsonで返却
+@RestController
+@RequestMapping("/api/books")	//エンドポイント設定
+public class BookController {
+	
+	private final BookService bookService;
+	
+	/**
+	 * @param bookService 書籍サービスクラス
+	 */
+	public BookController(BookService bookService) {
+		this.bookService = bookService;
+	}
+	
+	@GetMapping("index")
+	public List<Book> getFixedData() {
+		return bookService.getFixedBookData();
+	}
+
+}

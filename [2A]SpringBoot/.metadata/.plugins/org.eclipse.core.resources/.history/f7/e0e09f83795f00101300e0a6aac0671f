@@ -1,0 +1,21 @@
+package com.college.yi.bookmanager.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.college.yi.bookmanager.service.BookService;
+
+@Controller
+@RequestMapping("/api/books")
+public class BookController {
+	
+	private final BookService bookService;
+	
+	/**
+	 * @param bookService 書籍サービスクラス
+	 */
+	public BookController(BookService bookService) {
+		this.bookService = bookService;
+	}
+
+}

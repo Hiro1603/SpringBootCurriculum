@@ -1,0 +1,32 @@
+package com.college.yi.bookmanager.service;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.college.yi.bookmanager.model.Book;
+
+@Service
+public class BookService {
+	
+	public List<Book> getBookData(){
+		
+		Book book1 = new Book("001", "第1巻", "ヒッシャ", "シュッパンシャ", LocalDate.of(2025, 7, 1), 30);
+		Book book2 = new Book("002", "第2巻", "ヒッシャ", "シュッパンシャ", LocalDate.of(2025, 7, 8), 25);
+		Book book3 = new Book("003", "第3巻", "ヒッシャ", "シュッパンシャ", LocalDate.of(2025, 7, 15), 20);
+		Book book4 = new Book("004", "第4巻", "ヒッシャ", "シュッパンシャ", LocalDate.of(2025, 7, 22), 15);
+		Book book5 = new Book("005", "第5巻", "ヒッシャ", "シュッパンシャ", LocalDate.of(2025, 7, 29), 10);
+		
+		List<Book> bookData = new ArrayList<Book>();
+		bookData.add(book1);
+		bookData.add(book2);
+		bookData.add(book3);
+		bookData.add(book4);
+		bookData.add(book5);
+		
+		return bookData;
+	}
+
+}

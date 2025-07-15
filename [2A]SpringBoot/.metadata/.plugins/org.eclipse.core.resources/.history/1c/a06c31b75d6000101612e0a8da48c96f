@@ -1,0 +1,25 @@
+package com.college.yi.bookmanager.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/books")	//エンドポイント設定
+public class BookTemplateView {
+	
+	private final BookController bookController;
+	
+	/**
+	 * @param bookService 書籍コントローラークラス
+	 */
+	public BookTemplateView(BookController bookController) {
+		this.bookController = bookController;
+	}
+	
+	@GetMapping
+	public String getBookData(Model model) {
+		return "index";
+	}
+}

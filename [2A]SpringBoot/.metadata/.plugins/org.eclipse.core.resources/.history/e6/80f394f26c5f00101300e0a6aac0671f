@@ -1,0 +1,61 @@
+package com.college.yi.bookmanager.model;
+
+import java.time.LocalDate;
+
+public class Book {
+	private String id;
+	private String title;
+	private String author;
+	private String publisher;
+	private LocalDate publicationDate;
+	private int stockQuantity;
+	
+	// idのゲッターとセッター
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	// titleのゲッターとセッター
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	// authorのゲッターとセッター
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
+	// publisherのゲッターとセッター
+	public String getPublisher() {
+		return publisher;
+	}
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+	
+	// publicationDateのゲッターとセッター
+	public LocalDate getPublicationDate() {
+		return publicationDate;
+	}
+	public void setPublicationDate(LocalDate publicationDate) {
+		this.publicationDate = publicationDate;
+	}
+	
+	// stockQuantityのゲッターとセッター
+	public int getStockQuantity() {
+		return stockQuantity;
+	}
+	public void setStockQuantity(int stockQuantity) {
+		this.stockQuantity = stockQuantity;
+	}
+
+}

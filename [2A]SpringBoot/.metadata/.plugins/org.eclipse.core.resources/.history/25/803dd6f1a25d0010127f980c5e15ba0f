@@ -1,0 +1,13 @@
+package com.college.yi.bookmanager.model;
+
+import java.time.LocalDate;
+
+public class Book {
+	String id;
+	String title;
+	String author;
+	String publisher;
+	LocalDate publicationDate;
+	int stockQuantity;
+
+}
